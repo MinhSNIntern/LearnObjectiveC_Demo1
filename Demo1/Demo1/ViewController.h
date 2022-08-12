@@ -14,8 +14,15 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UILabel *valueText;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UISlider *rangeSlider;
+@property (weak, nonatomic) IBOutlet UILabel *rangeValue;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (weak, nonatomic) IBOutlet UITextField *dateText;
 - (IBAction)dateSelected:(id)sender;
+- (IBAction)sliderValueChange:(id)sender;
+- (IBAction)changeToCustomSlider:(id)sender;
+- (IBAction)changeCustomSwitch:(id)sender;
+- (IBAction)segmentChange:(id)sender;
 
 - (IBAction)showAlertBtn:(id)sender;
 - (IBAction)switchSwipped:(id)sender;

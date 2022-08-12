@@ -47,32 +47,77 @@
                                 </connections>
                             </switch>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pR5-o8-1pg">
-                                <rect key="frame" x="0.0" y="181" width="414" height="162"/>
+                                <rect key="frame" x="0.0" y="242" width="414" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="xj9-uH-2cU"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqc-cs-Cqs">
-                                <rect key="frame" x="126" y="170" width="163" height="21"/>
+                                <rect key="frame" x="126" y="231" width="163" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3z-ob-16f">
-                                <rect key="frame" x="100" y="338" width="214" height="34"/>
+                                <rect key="frame" x="100" y="399" width="214" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="LEC-gu-LzE">
-                                <rect key="frame" x="122" y="391" width="171" height="57"/>
+                                <rect key="frame" x="122" y="452" width="171" height="57"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="dateSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="l2a-R6-gRc"/>
                                 </connections>
                             </datePicker>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gD9-20-mD1">
+                                <rect key="frame" x="18" y="567" width="378" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="UGe-gr-hjl"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Range Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWm-I2-7nC">
+                                <rect key="frame" x="160" y="517" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alS-rL-Rih">
+                                <rect key="frame" x="70" y="618" width="274" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Use custom range picker" titleAlignment="center"/>
+                                <connections>
+                                    <action selector="changeToCustomSlider:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DgY-vg-exC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7N-Bv-yxU">
+                                <rect key="frame" x="88" y="181" width="239" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Use custom switch" titleAlignment="center"/>
+                                <connections>
+                                    <action selector="changeCustomSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zv4-ar-xeA"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sxZ-bJ-MKn">
+                                <rect key="frame" x="106" y="676" width="202" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Green"/>
+                                    <segment title="Yellow"/>
+                                    <segment title="Orange"/>
+                                </segments>
+                                <connections>
+                                    <action selector="dateSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="izA-jL-XYj"/>
+                                    <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="WJ7-Qa-S7R"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,6 +127,9 @@
                         <outlet property="datePicker" destination="LEC-gu-LzE" id="PsX-Mq-DM5"/>
                         <outlet property="dateText" destination="p3z-ob-16f" id="qM4-GB-kBd"/>
                         <outlet property="pickerView" destination="pR5-o8-1pg" id="oxg-tX-H4M"/>
+                        <outlet property="rangeSlider" destination="gD9-20-mD1" id="fWY-Mx-J5v"/>
+                        <outlet property="rangeValue" destination="xWm-I2-7nC" id="2Px-fk-mbw"/>
+                        <outlet property="segmentControl" destination="sxZ-bJ-MKn" id="aJ3-Yk-e7A"/>
                         <outlet property="switchBtn" destination="TgZ-vh-71a" id="Nz0-fv-3nT"/>
                         <outlet property="switchStatusText" destination="bhc-DB-31V" id="GQJ-fW-62r"/>
                         <outlet property="valueText" destination="oqc-cs-Cqs" id="Ssa-0p-69v"/>
